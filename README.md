@@ -1,75 +1,45 @@
-# Nuxt Minimal Starter
+# Dailybread
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Order breads and accompaniments online.
 
-## Setup
+Live: [dailybread-store.vercel.app](https://dailybread-store.vercel.app)
 
-Make sure to install dependencies:
+## What it does
+
+Dailybread is an online storefront for ordering bread and accompaniments. Browse the catalog, pick quantities, and review your order in a cart before checking out.
+
+## Features
+
+- **Product catalog** — browse bread items and accompaniments with images
+- **Search** across products
+- **Cart** with quantities and persisted state across reloads
+- **Checkout** summary with payment box
+- Responsive storefront layout
+
+## Tech stack
+
+- [Nuxt](https://nuxt.com) (App Router layout) + Vue 3
+- [Pinia](https://pinia.vuejs.org) with persisted cart state
+- [Nuxt UI](https://ui.nuxt.com) components
+- Tailwind CSS
+
+## Getting started
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Open [http://localhost:3000](http://localhost:3000). Build for production with `npm run build`.
 
-Build the application for production:
+## Project structure
 
-```bash
-# npm
-npm run build
+- `app/pages` — `index.vue` (catalog) and `cart.vue` (cart/checkout)
+- `app/components` — BreadItem, BreadList, AccompanimentsList, SearchBar, PaymentBox, QuantitySelector
+- `app/stores` — `cart`, `global`, `product` Pinia stores
+- `app/data/datas.ts` — product seed data
+- `public/breads` — product images
 
-# pnpm
-pnpm build
+## Status
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Active project. Default Nuxt template README replaced on 2026-09; feature set reflects the current codebase.
